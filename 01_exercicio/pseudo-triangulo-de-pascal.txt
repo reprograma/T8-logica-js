@@ -1,0 +1,29 @@
+procedimento calculaProximaLinha (linha_anterior)
+  proxima_linha = [ ]
+  para cada elemento da linha_anterior menos o ultimo
+    proxima_linha.ADICIONAR_AO_FINAL(atual_elemento + proximo_elemento)
+  proxima_linha.ADICIONAR_AO_INICIO(1)
+  proxima_linha.ADICIONAR_AO_FINAL(1)
+  retorna proxima_linha
+
+procedimento trianguloDePascal (numero_de_linhas)
+  se numero_de_linhas < 1
+    retorna 'Opa! Insira um número de linhas maior que 0.'
+  
+  triangulo_de_pascal = [ ]
+  
+  linha_anterior = [ 1 ]
+  triangulo_de_pascal.ADICIONAR_AO_FINAL(linha_anterior)
+  para numero_de_linhas - 1
+    proxima_linha = calculaProximaLinha(linha_anterior)
+    triangulo_de_pascal.ADICIONAR_AO_FINAL(proxima_linha)
+    linha_anterior = proxima_linha
+
+  retorna triangulo_de_pascal
+
+// Exemplo -> trianguloDePascal(5)
+// [ 1 ],
+// [ 1, 1 ],
+// [ 1, 2, 1 ],
+// [ 1, 3, 3, 1 ],
+// [ 1, 4, 6, 4, 1 ]
