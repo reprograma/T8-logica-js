@@ -1,0 +1,20 @@
+procedimento verificaPalindromo(palavra)
+  palavra_invertida = palavra.INVERTE()
+  se palavra == palavra_invertida
+    retorna VERDADE
+  senão
+    retorna MENTIRA
+// ou...
+procedimento verificaPalindromo(palavra)
+  para indice = 0, enquanto indice < arredondaParaBaixo(palavra.length / 2)
+    se palavra[indice] != palavra[(palavra.length - 1) - indice]
+      retorna MENTIRA
+  retorna VERDADE
+// ou...
+procedimento verificaPalindromo(palavra)
+  para indice = 0, enquanto indice < palavra.length
+    se indice > (palavra.length - 1) - indice
+      PARA O LOOP
+    se palavra[indice] != palavra[(palavra.length - 1) - indice]
+      retorna MENTIRA
+  retorna VERDADE
