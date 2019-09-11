@@ -1,0 +1,17 @@
+[ [ 0, 0, 0, 1, 0 ],
+  [ 0, 0, 0, 1, 0 ],
+  [ 1, 1, 1, 1, 1 ],
+  [ 0, 0, 0, 1, 0 ],
+  [ 0, 0, 0, 1, 0 ] ]
+
+procedimento acendeAsLuzes (indice_da_linha_clicada, indice_da_coluna_clicada): 
+  tabela = [ [ 0, 0, 0, 0, 0 ],
+             [ 0, 0, 0, 0, 0 ],
+             [ 0, 0, 0, 0, 0 ],
+             [ 0, 0, 0, 0, 0 ],
+             [ 0, 0, 0, 0, 0 ] ]
+  para cada elemento em tabela[indice_da_linha_clicada]
+    elemento = 1
+  para cada linha em tabela
+    linha[indice_da_coluna_clicada] = 1
+  retorna tabela
