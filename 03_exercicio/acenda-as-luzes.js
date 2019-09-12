@@ -19,11 +19,16 @@ function acendaAsLuzes(tabela, linha, coluna) {
     throw 'Opa, index da coluna fora do que pode, ai ai ai.'
   }
 
-  for (let i = 0; i < tabela[linha].length; i = i + 1) {
-    tabela[linha][i] = 1
+  let tabela_clonada = [ ]
+  for (let i = 0; i < tabela.length; i++) {
+    tabela_clonada.push([ ...tabela[i] ])
   }
-  for (let i = 0; i < tabela.length; i = i + 1) {
-    tabela[i][coluna] = 1
+
+  for (let i = 0; i < tabela_clonada[linha].length; i = i + 1) {
+    tabela_clonada[linha][i] = 1
   }
-  return tabela
+  for (let i = 0; i < tabela_clonada.length; i = i + 1) {
+    tabela_clonada[i][coluna] = 1
+  }
+  return tabela_clonada
 }
