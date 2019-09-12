@@ -1,15 +1,13 @@
-[ [ 0, 0, 0, 1, 0 ],
-  [ 0, 0, 0, 1, 0 ],
-  [ 1, 1, 1, 1, 1 ],
-  [ 0, 0, 0, 1, 0 ],
-  [ 0, 0, 0, 1, 0 ] ]
+procedimento criaTabela(num_linhas, num_colunas)
+  tabela = [ ]
+  para i = 0, enquanto i < num_linhas, i = i + 1
+    linha = [ ]
+    para j = 0, enquanto j < num_colunas, j = j + 1
+      linha.ADICIONA_AO_FINAL(0)
+    tabela.ADICIONA_AO_FINAL(linha)
+  retorna tabela
 
-procedimento acendeAsLuzes (indice_da_linha_clicada, indice_da_coluna_clicada): 
-  tabela = [ [ 0, 0, 0, 0, 0 ],
-             [ 0, 0, 0, 0, 0 ],
-             [ 0, 0, 0, 0, 0 ],
-             [ 0, 0, 0, 0, 0 ],
-             [ 0, 0, 0, 0, 0 ] ]
+procedimento acendeAsLuzes (tabela, indice_da_linha_clicada, indice_da_coluna_clicada): 
   para cada elemento em tabela[indice_da_linha_clicada]
     elemento = 1
   para cada linha em tabela
