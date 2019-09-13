@@ -27,14 +27,6 @@ function acendaAsLuzes(tabela, linha, coluna) {
     throw 'Opa, index da coluna fora do que pode, ai ai ai.'
   }
 
-  let tabela_clonada = [ ]
-  for (let i = 0; i < tabela.length; i++) {
-    for(let j = 0; j < tabela[i].length; j++) {
-      const td = tabela[i][j]
-      td.classList.remove('painted')
-    }
-  }
-
   for (let i = 0; i < tabela[linha].length; i = i + 1) {
     const td = tabela[linha][i]
     td.classList.add('painted')

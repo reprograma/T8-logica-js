@@ -1,0 +1,31 @@
+[ 14, 7, 2, 15, 0, -1 ]
+->
+[ -1, 0, 2, 7, 14, 15 ]
+
+procedimento ordenaLista(lista)
+  lista_ordenada = [ ]
+  enquanto lista.length > 0
+    menor_elemento = lista[0]
+    para i = 0, enquanto i < lista.length, i = i + 1
+      se menor_elemento > lista[i]
+        menor_elemento = lista[i]
+    lista.REMOVE_ELEMENTO(menor_elemento)
+    lista_ordenada.ADICIONA_AO_FINAL(menor_elemento)
+  retorna lista_ordenada
+
+// ou...
+
+procedimento estaOrdenada(lista)
+  para i = 0, enquanto i < lista.length - 1, i = i + 1
+    se lista[i] > lista[i + 1]
+      retorna FALSO
+  retorna VERDADEIRO
+
+procedimento ordenaLista(lista)
+  enquanto(!(estaOrdenada(lista)))
+    para i = 0, enquanto i < lista.length - 1, i = i + 1
+      se lista[i] > lista[i + 1]
+        aux = lista[i + 1]
+        lista[i + 1] = lista[i]
+        lista[i] = aux
+  retorna lista
