@@ -1,0 +1,60 @@
+ordernarLista([3, 2, 1])
+
+lista = [3, 2, 1]
+lista_ordenada = [ ]
+
+lista.length > 0 -> 3 > 0 ? sim!
+  // 1 iteracao do while
+  indice_menor_elemento = 0
+  i = 0; i < lista.length -> 0 < 3 ? sim!
+  // 1 iteracao do for
+    lista[0] > lista[0] -> 3 > 3 ? não!
+  i = 0 + 1 -> i = 1; 1 < 3 ? sim!
+  // 2 iteracao do for
+    lista[0] > lista[1] -> 3 > 2 ? sim!
+    indice_menor_elemento = 1
+  i = 1 + 1 -> i = 2; 2 < 3 ? sim !
+  // 3 iteracao do for
+    lista[1] > lista[2] -> 2 > 1 ? sim!
+    indice_menor_elemento = 2
+  i = 2 + 1 -> i = 3; 3 < 3 ? não
+  // cabo o for
+  lista_ordenada.push(lista[2])
+  lista_ordenada = [ 1 ]
+  lista.splice(2, 1)
+  lista = [ 3, 2 ]
+
+2 > 0 ? sim!
+// 2 iteracao do while
+  indice_menor_elemento = 0
+  i = 0; 0 < 2 ? sim!
+  // 1 iteracao do for
+    lista[0] > lista[0] -> 3 > 3 ? næo
+  i = 0 + 1 -> i = 1; 1 < 2 ? sim!
+  // 2 iteracao do for
+    lista[0] > lista[1] -> 3 > 2 ? sim
+      indice_menor_elemento = 1
+  i = 1 + 1 -> i = 2; 2 < 2 ? næo
+  // cabo o for
+  lista_ordenada.push(lista[1])
+  lista_ordenada = [ 1, 2 ]
+  lista.splice(1, 1)
+  lista = [ 3 ]
+
+1 > 0 ? sim!
+// 3 iteracao do while
+  indice_menor_elemento = 0
+  i = 0; 0 < 1 ? sim!
+  // 1 iteracao do for
+    lista[0] > lista[0] -> 3 > 3 ? não!
+  i = 0 + 1 -> i = 1; 1 < 1 ? næ0
+  // cabo o for
+  lista_ordenada.push(lista[0])
+  lista_ordenada = [ 1, 2, 3 ]
+  lista.splice(0, 1)
+  lista = [ ]
+
+0 > 0 ? não
+// CABO O while
+
+retorna lista_ordenada -> [1, 2, 3]
